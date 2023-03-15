@@ -86,4 +86,24 @@ public class HerokuApplication {
     }
   }
 
+  public static String getRandomString() {
+    // Define the characters that can appear in the random string
+    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    // Define the length of the random string
+    private static final int LENGTH = 10;
+
+    // Create a random number generator
+    private static final Random RANDOM = new Random();
+    
+    StringBuilder sb = new StringBuilder(LENGTH);
+    for (int i = 0; i < LENGTH; i++) {
+        // Choose a random character from the character set and add it to the string
+        int randomIndex = RANDOM.nextInt(CHARACTERS.length());
+        char randomChar = CHARACTERS.charAt(randomIndex);
+        sb.append(randomChar);
+    }
+    return sb.toString();
+}
+
 }
