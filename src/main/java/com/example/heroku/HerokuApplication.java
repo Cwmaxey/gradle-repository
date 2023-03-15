@@ -33,6 +33,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Random;
 
 @Controller
 @SpringBootApplication
@@ -95,7 +96,7 @@ public class HerokuApplication {
 
     // Create a random number generator
     private static final Random RANDOM = new Random();
-    
+
     StringBuilder sb = new StringBuilder(LENGTH);
     for (int i = 0; i < LENGTH; i++) {
         // Choose a random character from the character set and add it to the string
