@@ -72,6 +72,8 @@ public class HerokuApplication {
       model.put("message", e.getMessage());
       return "error";
     }
+
+    System.out.println("Print statement inside HerokuApplication.db() method. Conner Maxey");
   }
 
   @Bean
